@@ -10,7 +10,6 @@ The reshaped matrix need to be filled with all the elements of the original matr
 If the 'reshape' operation with given parameters is possible and legal,
 output the new reshaped matrix; Otherwise, output the original matrix.
 
-
 Example 1:
 Input:
 nums =[[1,2],[3,4]]
