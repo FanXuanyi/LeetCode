@@ -20,18 +20,20 @@ You may assume that the array is non-empty and the majority element always exist
  * @param {number[]} nums
  * @return {number} num
  */
+/**
+ * @param {number[]} nums
+ * @return {number} num
+ */
 var majorityElement = function(nums) {
     var count = [],
         len = nums.length,
         num = 0;
     for (var i=0; i<len; i++) {
-        for (var i=0; i<len; i++) {
-            if (!count[nums[i]]) {
-                count[nums[i]] = 1;
-            }
-            else {
-                count[nums[i]]++;
-            }
+        if (!count[nums[i]]) {
+            count[nums[i]] = 1;
+        }
+        else {
+            count[nums[i]]++;
         }
     }
     for (var k in count) {
