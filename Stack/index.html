@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script type="text/javascript">
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+    var left = 0,
+        right = s.length-1;
+    while (left<right) {
+        if (s[right] === ')') {
+            if (left<right && s[left] === '(')
+                left++;
+            else
+                return false;
+        }
+        if (s[right] === ']') {
+            if (left<right && s[left] === '[')
+                left++;
+            else
+                return false;
+        }
+        if (s[right] === '}') {
+            if (left<right && s[left] === '{')
+                left++;
+            else
+                return false;
+        }
+        right--;
+    }
+    return true;
+};
+console.log(isValid("()[]{}"));
+	</script>
+</body>
+</html>
