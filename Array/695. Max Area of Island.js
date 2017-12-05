@@ -25,6 +25,7 @@ Note: The length of each dimension in the given grid does not exceed 50.
  */
 
 /*
+题目：
 假设有一个非空二维数组grid，它由0和1组成，
 一个岛屿是由一组1（代表陆地）来表示，
 而且1之间是相连的（四个方向，即水平或垂直），
