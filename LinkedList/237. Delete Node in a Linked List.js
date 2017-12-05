@@ -7,7 +7,7 @@ Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node wi
 
 /*
 题目：
-写一个方法，移除单向链表的一个节点（最后一个节点除外）。
+写一个方法，删除单向链表的一个节点（最后一个节点除外）。
 
 分析：
 既然要移除当前节点，就是将前一个节点直接指向下一个节点，
