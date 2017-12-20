@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+var reverseStr = function(s, k) {
+	let arrS = s.split("");
+    for (let i=0; i<arrS.length; i+=2*k) {
+        reverse(arrS, i, i+k-1);
+    }
+    return arrS.join("");
+};
+
+var reverse = function(arr,start,end) {
+    if (end > arr.length-1) {
+        end = arr.length - 1;
+    }
+    while (start < end) {
+        let temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+};
+
+console.log(reverseStr("abcd",2));
+</script>
+</body>
+</html>
