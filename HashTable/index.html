@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+var topKFrequent = function(nums, k) {
+    var set = {};
+	var result = [];
+
+	var count = 0;
+	for (var i = 0; i < nums.length; i++){
+	    if (set[nums[i]] !== undefined) {
+	        result[set[nums[i]]][1]++;
+	    } else {
+	        set[nums[i]] = count;
+	        result.push([nums[i],0]);
+	        count++;
+	    }
+	}
+
+	result.sort((x, y)=>(x[1] - y[1]));
+
+	var final = [];
+	for (var i = result.length - k; i < result.length; i++) {
+	    final.push(result[i][0]);
+	}
+
+	return final;
+};
+
+console.log(topKFrequent([1,1,2,2,2,3,5],1));
+</script>
+</body>
+</html>
