@@ -9,6 +9,17 @@ Note:
     Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
  */
 
+/*
+题目：
+给定一个非空整数数组，返回数组中出现次数最多的k个元素。
+
+分析：
+先统计数组中每个数字出现的次数，
+再以[数字,次数]的形式存储在一个数组中，
+根据出现的次数按从小到大的顺序重新排序，
+找出次数最多的k个元素。
+ */
+
 /**
  * @param {number[]} nums
  * @param {number} k
